@@ -9,6 +9,7 @@ import About from './pages/about';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import LoginButton from './Components/LoginButton';
 import LogoutButton from './Components/LogoutButton';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
 
@@ -35,8 +36,14 @@ function App() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <Auth0Provider
+                domain="dev-n4quk35t.us.auth0.com"
+                clientId="c0dz6JgOE62kJ9lWe8r0kW7KbVMQ1pZW"
+                redirectUri={window.location.origin}
+            >
             <LoginButton></LoginButton>
             <LogoutButton></LogoutButton>
+            </Auth0Provider>
           </Nav>
         </Navbar.Collapse>
       </Container>
