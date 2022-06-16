@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Form } from 'react-bootstrap'
 import { useState, FC, ChangeEvent } from 'react'
-import { CreateOrder } from './API'
+import { CreateOrder } from '../API'
 
 const Create = () => {
     const [latitude, setLatitude] = useState<number>()

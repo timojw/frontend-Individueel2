@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from 'react-bootstrap';
-import {GetAll} from './API';
-import {IOrder} from './Interfaces/Order';
+import {GetAll} from '../API';
+import {IOrder} from '../Interfaces/Order';
 
 
 export default function AllOrders() {
@@ -16,14 +16,17 @@ export default function AllOrders() {
 
     return (
         <div>
-            Test
             {
                 Orders.map((order) => {
                     console.log(Orders[0].id)
                     return(
                         <div>
-                            {order.id}
-                           
+                            <label>Order Number: {order.id} </label>
+                            <label>Order Location: {order.latitude} | {order.longitude} </label>
+                            {/* {if(order.restaurantID == 1)} {
+                                <label>De Bengel</label>
+                            } */}
+ 
                         </div>
                     ) 
                 })          
