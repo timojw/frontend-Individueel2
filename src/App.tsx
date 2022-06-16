@@ -7,6 +7,8 @@ import Create from './Components/create';
 import Home from './pages/index';
 import About from './pages/about';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import LoginButton from './Components/LoginButton';
+import LogoutButton from './Components/LogoutButton';
 
 
 
@@ -33,6 +35,8 @@ function App() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
+            <LoginButton></LoginButton>
+            <LogoutButton></LogoutButton>
           </Nav>
         </Navbar.Collapse>
       </Container>
